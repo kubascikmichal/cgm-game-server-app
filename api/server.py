@@ -21,7 +21,7 @@ def run(users:[], ip:str="0.0.0.0", port:int=5000):
                 'data':actual_data}
     
     def actualize_CGM():
-        print(f"new data approaching %s"%(time()))
+        print(f"new data approaching %s"%(int(time())))
         global actual_data, last_check_time
         last_check_time = int(time())
         actual_data = []
