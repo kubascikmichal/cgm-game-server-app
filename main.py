@@ -14,7 +14,7 @@ for credentials in credentials_items:
         dexcom_users.append(Dexcom(
             username=credentials['username'], 
             password=credentials['password'], 
-            region=credentials['region'])
+            region=credentials['region']))
     elif(credentials['type'] == "LibreLinkUp"):
         libre_users.append(LibreLinkUpClient(
         username=credentials['username'],
@@ -30,5 +30,6 @@ print(glucose_reading)
 
 for client in libre_users:
     client.login()
+
 glucose_data = libre_users[0].get_raw_connection()
 print(glucose_data['glucoseMeasurement']['Value'])
