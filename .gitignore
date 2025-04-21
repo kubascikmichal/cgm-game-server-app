@@ -1,2 +1,3 @@
 configs/credentials.js
 configs/credentials.json
+/api/__pycache__
