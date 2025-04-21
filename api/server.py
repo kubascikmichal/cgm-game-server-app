@@ -16,7 +16,7 @@ def run(users:[], ip:str="0.0.0.0", port:int=5000):
     
     @app.route("/getCGMData")
     def getCGMData():
-        global actual_data
+        global actual_data,last_check_time
         return {'time':last_check_time,
                 'data':actual_data}
     
