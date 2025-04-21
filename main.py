@@ -34,10 +34,11 @@ for dexcom_key in dexcom_users:
     glucose_reading = dexcom_users[dexcom_key].get_current_glucose_reading()
     print(glucose_reading.mmol_l)
     
-'''
+
 for libre_user in libre_users:
     for libre_key in libre_user:
         print(f"id: %s, obj: %s"%(libre_key, libre_user[libre_key]))
         libre_user[libre_key].login()
         glucose_data = libre_user[libre_key].get_raw_connection()
         print(glucose_data['glucoseMeasurement']['Value'])
+'''
